@@ -42,7 +42,7 @@ a {
 	color: var(--dark-color-a);
 	border: 0;
 	font-size: 17px;
-	margin-left: 10px;
+	/* margin-left: 10px; */
 	margin-bottom: 10px;
 }
 
@@ -166,6 +166,9 @@ select {
 }
 
 .chat-messages {
+	opacity: 1;
+	background-image: radial-gradient(#7B2869 0.5px, #ffffff 0.5px);
+	background-size: 10px 10px;
 	padding: 30px;
 	max-height: 500px;
 	overflow-y: scroll;
@@ -177,6 +180,7 @@ select {
 	background-color: var(--light-color);
 	border-radius: 5px;
 	overflow-wrap: break-word;
+	cursor: pointer;
 }
 
 .chat-messages .message .meta {

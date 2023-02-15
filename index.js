@@ -1,7 +1,7 @@
 const express = require("express");
 const socketio = require("socket.io");
 const http = require("http");
-const port = 8080;
+const port = 3000;
 const {
   userJoin,
   getCurrentUser,
@@ -14,7 +14,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-const boatName = "Masai Server";
+const boatName = "MeetSnob";
 
 io.on("connection", (socket) => {
   console.log("Hii from the server");
@@ -24,7 +24,7 @@ io.on("connection", (socket) => {
     socket.join(user.room);
 
     //welcome message to current user
-    socket.emit("message", formateMessage(boatName, "welcome to Masai Server"));
+    socket.emit("message", formateMessage(boatName, "welcome to MeetSnob"));
 
     socket.broadcast
       .to(user.room)
